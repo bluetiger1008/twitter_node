@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	.container
+		img.logo(src='images/logo.png')
+		h1 Let's Start Fresh
+		p.description We’ve all been there: After 15 minutes on hold, the agent picks up and you let them have it. Within a few minutes you’re calm, issue solved, and you go about your day. Here’s your chance to apologize for going all <span style="font-style: italic">Real Housewives of Customer Service</span> on them.
+		form(action='/' method='post')
+			.form-group
+				input.form-control(type='text', name='firstname', placeholder='Your First Name')
+			.form-group
+				input.form-control(type='text', name='company', placeholder='@company you were heated with')
+			.form-group
+				textarea.form-control(rows='5', name='message', placeholder="How'd they help?")
+			button.btn.btn-submit(type='submit') Send
+
+		p.thankyou-for #ThankYouForHelping sponsored by 
+			span(style='text-decoration:underline') Teckst
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+		script(src='javascripts/bootstrap.min.js')
